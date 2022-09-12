@@ -1,12 +1,21 @@
 # Implementation of structures and algorithmns related to biology in general
 
+
 ### Working on
 - DNA and RNA improvement 
+- Protein implentation
+- Maximum number of possibles mRNA from of a protein.
+
 
 ### Done
 - DNA to RNA transcription
 - DNA reverse complement
 - RNA to Protein transcription
+
+
+
+
+
 
 ### References
 - The Machinery of Life, David Goodsell
