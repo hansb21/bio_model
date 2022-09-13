@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 struct DNA {
     dna_str: String,
     nuc_a: usize,
@@ -135,6 +137,77 @@ impl RNA {
             }
 
         protein
+    }
+
+    fn setup_codon_table(&self) -> HashMap<&str, char> {
+        let mut codon_table = HashMap::from([
+            ("UUU", 'F'),
+            ("UUC", 'F'),
+            ("UUA", 'L'),
+            ("UUG", 'L'),
+            ("UCU", 'S'),
+            ("UCC", 'S'),
+            ("UCA", 'S'),
+            ("UCG", 'S'),
+            ("UAU", 'Y'),
+            ("UAC", 'Y'),
+            ("UAA", '\n'),
+            ("UAG", '\n'),
+            ("UGU", 'C'),
+            ("UGC", 'C'),
+            ("UGA", '\n'),
+            ("UGG", 'W'),
+            ("CUU", 'L'),
+            ("CUC", 'L'),
+            ("CUA", 'L'),
+            ("CUG", 'L'),
+            ("CCU", 'P'),
+            ("CCC", 'P'),
+            ("CCA", 'P'),
+            ("CCG", 'P'),
+            ("CAU", 'H'),
+            ("CAC", 'H'),
+            ("CAA", 'Q'),
+            ("CAG", 'Q'),
+            ("CGU", 'R'),
+            ("CGC", 'R'),
+            ("CGA", 'R'),
+            ("CGG", 'R'),
+            ("AUU", 'I'),
+            ("AUC", 'I'),
+            ("AUCA", 'I'),
+            ("AUCG", 'M'),
+            ("ACCU", 'T'),
+            ("ACCC", 'T'),
+            ("ACCA", 'T'),
+            ("ACCG", 'T'),
+            ("AACU", 'N'),
+            ("AACC", 'N'),
+            ("AACA", 'K'),
+            ("AACG", 'K'),
+            ("AGCU", 'S'),
+            ("AGCC", 'S'),
+            ("AGCA", 'R'),
+            ("AGCG", 'R'),
+            ("GUU", 'V'),
+            ("GUC", 'V'),
+            ("GUA", 'V'),
+            ("GUG", 'V'),
+            ("GCU", 'A'),
+            ("GCC", 'A'),
+            ("GCA", 'A'),
+            ("GCG", 'A'),
+            ("GAU", 'D'),
+            ("GAC", 'D'),
+            ("GAA", 'E'),
+            ("GAG", 'E'),
+            ("GGU", 'G'),
+            ("GGC", 'G'),
+            ("GGA", 'G'),
+            ("GGG", 'G'),
+        ]);
+
+        codon_table
     }
 }
 
