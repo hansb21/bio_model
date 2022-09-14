@@ -1,1 +1,1 @@
-pub mod Protein;
+pub mod protein;

@@ -1,1 +1,1 @@
-pub mod DNA;
+pub mod dna;
